@@ -74,7 +74,7 @@ export default function Home() {
               url="https://kubicom.com/"
             />
             <Project
-              title="Furhoffs"
+              title="Furhoffs / Stala"
               description="Uppdaterade befintligt projekt med ny funktionalitet och gav hela sidan en grafisk makeover "
               role="Fullstack"
               length="Förvaltning under tiden hos Avalon (5 år)"
