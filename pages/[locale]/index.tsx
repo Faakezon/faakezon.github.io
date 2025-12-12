@@ -5,26 +5,42 @@ import Reveal from "../../components/reveal";
 
 import ProjectsSection from "../../components/Projects/projectsSection";
 
-import { GetStaticPaths, GetStaticProps } from "next";
+import type { GetStaticPaths, GetStaticProps } from "next";
 import { getDictionary } from "@/lib/i18n";
-import { Dictionary, Locale } from "@/lib/i18n-types";
+import type { Dictionary, Locale } from "@/lib/i18n-types";
 
-const locales = ["en", "sv"];
+export const locales: Locale[] = ["en", "sv"];
 
-export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: locales.map((locale) => ({ params: { locale } })),
-  fallback: false,
-});
+interface PageProps {
+  locale: Locale;
+  dictionary: Dictionary;
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: locales.map((locale) => ({
+      params: { locale },
+    })),
+    fallback: false, // ensures only defined locales are generated
+  };
+};
 
 export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   const locale = params?.locale as Locale;
+
   const dictionary = getDictionary(locale);
 
   if (!dictionary) {
-    throw new Error(`Dictionary not found for locale ${locale}`);
+    // this will fail the build if dictionary is missing
+    throw new Error(`Dictionary not found for locale "${locale}"`);
   }
 
-  return { props: { locale, dictionary } };
+  return {
+    props: {
+      locale,
+      dictionary,
+    },
+  };
 };
 
 interface PageProps {
