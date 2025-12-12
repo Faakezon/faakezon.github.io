@@ -1,13 +1,16 @@
 "use client";
 
-import { Dictionary } from "@/lib/i18n-types";
 import Image from "next/image";
+
+import { Dictionary } from "@/lib/i18n-types";
+
+import { githubLoader } from "./githubLoader";
 
 interface HeaderProps {
   dictionary: Dictionary;
 }
 
-const Header = ({ dictionary }: HeaderProps) => {
+export const Header = ({ dictionary }: HeaderProps) => {
   const t = dictionary.Home;
 
   const startDate = new Date(2018, 8); // September 2018 (month is 0-indexed)
@@ -16,10 +19,6 @@ const Header = ({ dictionary }: HeaderProps) => {
     now.getFullYear() -
     startDate.getFullYear() -
     (now.getMonth() < startDate.getMonth() ? 1 : 0);
-
-  const githubLoader = ({ src, width }: { src: string; width: number }) => {
-    return `https://faakezon.github.io/portfolio.github.io${src}?w=${width}`;
-  };
 
   return (
     <div className="flex flex-col items-center sm:items-start w-full mb-16">
@@ -49,5 +48,3 @@ const Header = ({ dictionary }: HeaderProps) => {
     </div>
   );
 };
-
-export default Header;

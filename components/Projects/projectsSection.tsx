@@ -1,13 +1,13 @@
-import Reveal from "../reveal";
-import Title from "../title";
-import Project from "./project";
+import { Reveal } from "../reveal";
+import { Title } from "../title";
+import { Project } from "./project";
 import type { Dictionary } from "../../lib/i18n-types";
 
 interface ProjectsSectionProps {
   dictionary: Dictionary;
 }
 
-const ProjectsSection = ({ dictionary }: ProjectsSectionProps) => {
+export const ProjectsSection = ({ dictionary }: ProjectsSectionProps) => {
   const t = dictionary.Projects;
 
   const projects = [
@@ -43,5 +43,3 @@ const ProjectsSection = ({ dictionary }: ProjectsSectionProps) => {
     </section>
   );
 };
-
-export default ProjectsSection;

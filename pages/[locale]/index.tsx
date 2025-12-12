@@ -1,13 +1,13 @@
-import Header from "../../components/header";
-import Title from "../../components/title";
-import Skill from "../../components/skill";
-import Reveal from "../../components/reveal";
+import { Header } from "../../components/header";
+import { Reveal } from "../../components/reveal";
+import { Skill } from "../../components/skill";
+import { Title } from "../../components/title";
 
-import ProjectsSection from "../../components/Projects/projectsSection";
+import { ProjectsSection } from "../../components/Projects/projectsSection";
 
-import type { GetStaticPaths, GetStaticProps } from "next";
 import { getDictionary } from "@/lib/i18n";
 import type { Dictionary, Locale } from "@/lib/i18n-types";
+import type { GetStaticPaths, GetStaticProps } from "next";
 
 export const locales: Locale[] = ["en", "sv"];
 

@@ -2,14 +2,14 @@
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import React, { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 
 interface RevealProps {
   delay?: number;
   children: ReactNode;
 }
 
-export default function Reveal({ children, delay = 0 }: RevealProps) {
+export const Reveal = ({ children, delay = 0 }: RevealProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.15, triggerOnce: true });
 

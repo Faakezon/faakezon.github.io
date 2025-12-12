@@ -8,7 +8,7 @@ interface ProjectProps {
   workplace?: string;
 }
 
-export default function Project({ title, description, url, length, role, visitProject, workplace }: ProjectProps) {
+export const Project = ({ title, description, url, length, role, visitProject, workplace }: ProjectProps) => {
   return (
     <div className="p-6 rounded-3xl bg-gradient-to-br from-indigo-50 via-white to-pink-50 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-950 shadow-lg hover:scale-105 transition-transform duration-300">
       <h3 className="text-2xl font-semibold mb-2 text-indigo-800 dark:text-indigo-300">
