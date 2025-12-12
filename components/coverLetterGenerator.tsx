@@ -1,0 +1,58 @@
+"use client";
+import { useState } from "react";
+
+import { Dictionary } from "@/lib/i18n-types";
+
+interface CoverLetterGeneratorProps {
+  dictionary: Dictionary;
+}
+
+export const CoverLetterGenerator = ({ dictionary }: CoverLetterGeneratorProps) => {
+  const [input, setInput] = useState("");
+  const [output, setOutput] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const generate = async () => {
+    setLoading(true);
+    setOutput("");
+
+    const res = await fetch("https://your-worker-url.workers.dev/generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ jobDescription: input }),
+    });
+
+    const data = await res.json();
+    setOutput(data.coverLetter);
+    setLoading(false);
+  };
+
+  return (
+    <div className="w-full mt-16">
+      <h2 className="text-3xl font-bold mb-4">
+        Generate a Personalized Cover Letter
+      </h2>
+
+      <textarea
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Paste a job description here..."
+        className="w-full min-h-45 p-4 border border-zinc-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-zinc-900"
+      />
+
+      <button
+        onClick={generate}
+        disabled={loading}
+        className="mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-indigo-600 text-white font-medium shadow-lg hover:bg-indigo-700 transition-colors"
+      >
+        {loading ? "Generating…" : "Generate Cover Letter"}
+      </button>
+
+      {output && (
+        <div className="mt-8 p-6 border border-zinc-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-zinc-900">
+          <pre className="whitespace-pre-wrap text-lg">{output}</pre>
+        </div>
+      )}
+    </div>
+  );
+};

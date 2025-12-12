@@ -9,8 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@netlify/functions": "^5.1.1",
     "framer-motion": "^12.23.26",
-    "next": "16.0.8",
+    "next": "^16.0.10",
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "react-intersection-observer": "^10.0.0"

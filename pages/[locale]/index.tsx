@@ -8,6 +8,7 @@ import { ProjectsSection } from "../../components/Projects/projectsSection";
 import { getDictionary } from "@/lib/i18n";
 import type { Dictionary, Locale } from "@/lib/i18n-types";
 import type { GetStaticPaths, GetStaticProps } from "next";
+import { CoverLetterGenerator } from "@/components/coverLetterGenerator";
 
 export const locales: Locale[] = ["en", "sv"];
 
@@ -55,6 +56,12 @@ export default function Page({ dictionary }: PageProps) {
       <main className="flex min-h-screen w-full max-w-5xl flex-col items-center justify-start py-24 px-8 sm:items-start">
         <Reveal>
           <Header dictionary={dictionary} />
+        </Reveal>
+
+        <Reveal delay={0.5}>
+          <section className="w-full mb-16">
+        <CoverLetterGenerator dictionary={dictionary}></CoverLetterGenerator>
+        </section>
         </Reveal>
 
         <Reveal delay={0.5}>
