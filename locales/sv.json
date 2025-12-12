@@ -1,0 +1,91 @@
+{
+  "Home": {
+    "name": "Fabian Åkesson",
+    "aboutTitle": "Om mig",
+    "aboutParagraph": "Jag inledde min resa inom mjukvaruutveckling genom att fördjupa mig i programmering med Unity och C#. Det ledde vidare till en roll som mjukvaruutvecklingskonsult på Ericsson AB i Karlskrona, där jag arbetade med Java, JavaScript och relaterade teknologier.\n\nIdag arbetar jag som fullstackutvecklare och konsult på Avalon Innovation. Jag har varit involverad i flera projekt med varierande tekniska stackar och miljöer. Jag strävar alltid efter att utvecklas och testar nya teknologier och arbetssätt för att leverera moderna, hållbara lösningar.",
+    "skillsTitle": "Tekniker & Verktyg",
+    "skills": [
+      "TypeScript / JavaScript",
+      "React",
+      "Node",
+      "Express",
+      "Flutter",
+      "Dart",
+      "GraphQL",
+      "Vue",
+      "Docker",
+      "C#",
+      "Ember.js",
+      "PHP",
+      "MySQL",
+      "Git"
+    ],
+    "projectsTitle": "Projekt",
+    "contactTitle": "Kontakt",
+    "contactText": "Vill du komma i kontakt? Här är mina uppgifter:",
+    "profileRole": "Fullstackutvecklare & konsult på Avalon Innovation",
+    "yearsInIndustry": "år i branschen",
+    "yearsTooltip": "Beräknat från september 2018\ninklusive 6 månaders föräldraledighet.",
+    "ContactButtons": {
+      "email": "E-post",
+      "linkedin": "LinkedIn",
+      "emailUrl": "faak92@outlook.com",
+      "linkedinUrl": "https://www.linkedin.com/in/fabian-åkesson-06088867/"
+    }
+  },
+  "Projects": {
+    "sectionTitle": "Projekt",
+    "workplacePrefix": "Arbetsplats:",
+    "rolePrefix": "Roll:",
+    "lengthPrefix": "Projektlängd:",
+    "visitProject": "Besök projekt",
+    "Techquity": {
+      "title": "Techquity",
+      "description": "Generell utveckling av plattformen",
+      "role": "Frontend / Backend",
+      "length": "1 år",
+      "workplace": "Avalon Innovation AB",
+      "url": "https://techquity.se/"
+    },
+    "Skolon": {
+      "title": "Skolon",
+      "description": "Projekt under en kort period",
+      "role": "Frontend / Backend Test (Unit)",
+      "length": "4 månader",
+      "workplace": "Avalon Innovation AB",
+      "url": "https://skolon.com/sv/var-plattform/"
+    },
+    "Kubicom": {
+      "title": "Kubicom",
+      "description": "Generell utveckling av plattformen",
+      "role": "Frontend / Backend",
+      "length": "Av/På under 3 år",
+      "workplace": "Avalon Innovation AB",
+      "url": "https://kubicom.com/"
+    },
+    "FurhoffsStala": {
+      "title": "Furhoffs / Stala",
+      "description": "Uppdaterade befintligt projekt med ny funktionalitet och gav hela sidan en grafisk makeover",
+      "role": "Fullstack",
+      "length": "Förvaltning under tiden hos Avalon (5 år)",
+      "workplace": "Avalon Innovation AB",
+      "url": "https://konfigurator.furhoffs.se/"
+    },
+    "GalioOfSweden": {
+      "title": "Galio of Sweden",
+      "description": "Ny funktionalitet, dockeriserade projektet, hantering och uppdatering av backoffice-funktioner",
+      "role": "Fullstack",
+      "length": "2 år",
+      "workplace": "Avalon Innovation AB",
+      "url": "https://galioofsweden.com/"
+    },
+    "Dugga": {
+      "title": "Dugga - Digital Assessments",
+      "description": "Generell utveckling av alla aspekter av plattformen",
+      "role": "Fullstack",
+      "length": "3 år",
+      "workplace": "Dugga AB",
+      "url": "https://dugga.com/"
+    }
+  }
+}
