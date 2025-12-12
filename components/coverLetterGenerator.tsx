@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import { Dictionary } from "@/lib/i18n-types";
+import { Title } from "./title";
 
 interface CoverLetterGeneratorProps {
   dictionary: Dictionary;
@@ -31,9 +32,7 @@ export const CoverLetterGenerator = ({ dictionary }: CoverLetterGeneratorProps) 
 
   return (
     <div className="w-full mt-16">
-      <h2 className="text-3xl font-bold mb-4">
-        {t.generateCoverLetter}
-      </h2>
+      <Title title={t.generateCoverLetter} />
 
       <textarea
         value={input}
