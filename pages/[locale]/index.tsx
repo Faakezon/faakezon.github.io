@@ -60,12 +60,6 @@ export default function Page({ dictionary }: PageProps) {
 
         <Reveal delay={0.5}>
           <section className="w-full mb-16">
-        <CoverLetterGenerator dictionary={dictionary}></CoverLetterGenerator>
-        </section>
-        </Reveal>
-
-        <Reveal delay={0.5}>
-          <section className="w-full mb-16">
             <Title title={t.aboutTitle} />
             <p className="text-zinc-700 dark:text-zinc-400 leading-8 max-w-2xl text-lg whitespace-pre-line">
               {t.aboutParagraph}
@@ -134,6 +128,14 @@ export default function Page({ dictionary }: PageProps) {
               </a>
             </div>
           </section>
+
+          <Reveal delay={0.5}>
+            <section className="w-full mb-16">
+              <CoverLetterGenerator
+                dictionary={dictionary}
+              ></CoverLetterGenerator>
+            </section>
+          </Reveal>
         </Reveal>
       </main>
     </div>
